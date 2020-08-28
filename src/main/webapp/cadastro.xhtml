@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center> <h:form>
+            <h2>Formulário de Inscrição</h2> 
+            <h3> Preencha com os seus dados </h3>
+            <h:panelGrid columns="2">
+            <h:outputLabel value="Nome:" for="nome"/>
+            <h:inputText id="nome" value="#{cadastroMBean.cadastro.nome}" />
+            <h:outputLabel value="Sobrenome:" for="sobrenome"/>
+            <h:inputText id="sobrenome" value="#{cadastroMBean.cadastro.sobrenome}"/>
+            <h:outputLabel value="Email:" for="email"/>
+            <h:inputText id="email" value="#{cadastroMBean.cadastro.email}" />
+            <h:outputLabel value="Telefone:" for="telefone" />
+            <h:inputText id="telefone" value="#{cadastroMBean.cadastro.telefone}" />
+            <h:outputLabel value="Usuário:" for="usuario"/>
+            <h:inputText id="usuario" value="#{cadastroMBean.cadastro.usuario}" />
+            <h:outputLabel value="Senha:" for="senha"/>
+            <h:inputSecret id="senha" value="#{cadastroMBean.cadastro.senha}" />
+            
+            
+            
+          </h:panelGrid>
+            
+            <h:commandButton value="Registar" action="#{cadastroMBean.guardar}"/> 
+            <h:commandButton value="Feichar"/>
+        </h:form>
+       </center> 
+            
+         
+    </h:body>
+</html>
+
